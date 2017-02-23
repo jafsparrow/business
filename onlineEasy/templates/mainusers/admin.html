@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% load static %}
+  {% block customlink %}
+  <link rel="stylesheet" href="{% static "mainusers/css/sb-admin-2.css" %}">
+  <link rel="stylesheet" href="{% static "mainusers/css/metisMenu.css" %}">
+
+   {% endblock %}
+   <div id="wrapper">
+
+     {% block sidenav %} {% include 'mainusers/includes/sidenav.html' %}{% endblock sidenav%}
+
+     {% block dashcontend %} {% include 'mainusers/includes/dasharea.html' %} {% endblock dashcontend %}
+
+   </div>
+
+  {% block extrajs %}
+    <script type="text/javascript" src="{% static "mainusers/js/sb-admin-2.js" %}">  </script>
+    <script type="text/javascript" src="{% static "mainusers/js/metisMenu.js" %}">  </script>
+   {% endblock extrajs %}

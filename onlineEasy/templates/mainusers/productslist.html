@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block customlink %}
+<link rel="stylesheet" href="{% static "mainusers/css/sb-admin-2.css" %}">
+<link rel="stylesheet" href="{% static "mainusers/css/metisMenu.css" %}">
+<link rel="stylesheet" href="{% static "mainusers/css/dataTables.bootstrap.min.css" %}">
+
+ {% endblock %}
+
+ <div id="wrapper">
+   {% block sidenav %} {% include 'mainusers/includes/sidenav.html' %}{% endblock sidenav%}
+    {% block dashcontend %} {% include 'mainusers/includes/productstable.html' %}  {% endblock dashcontend %}
+
+ </div>
+
+
+
+<!-- /#page-wrapper -->
+
+
+{% block extrajs %}
+
+  <script type="text/javascript" src="{% static "mainusers/js/metisMenu.js" %}">  </script>
+  <script type="text/javascript" src="{% static "mainusers/js/jquery.dataTables.min.js" %}">  </script>
+  <script type="text/javascript" src="{% static "mainusers/js/dataTables.bootstrap.min.js" %}">  </script>
+  <script type="text/javascript" src="{% static "mainusers/js/dataTables.responsive.js" %}">  </script>
+    <script type="text/javascript" src="{% static "mainusers/js/sb-admin-2.js" %}">  </script>
+
+    <script>
+    $(document).ready(function() {
+    $('#dataTables-example').DataTable({
+        responsive: true
+    });
+    });
+    </script>
+ {% endblock extrajs %}
+
+
+
+</body>

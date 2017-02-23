@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} Order System {% endblock title%}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    {% block customlink %} {%endblock customlink %}
+  </head>
+  <body>
+
+
+
+    {% include "nav.html" %}
+    {% block sidenav%}    {% endblock sidenav %}
+    {% block dashcontend %} {% endblock dashcontend %}
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% block extrajs %} {% endblock extrajs %}
+  </body>
+</html>
